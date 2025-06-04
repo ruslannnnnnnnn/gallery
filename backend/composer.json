@@ -1,0 +1,21 @@
+{
+  "name": "qualix/test",
+  "description": "Тестовое задание",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ruslan Khibatullin",
+      "email": "ruslanhib1@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.4",
+    "ext-gd": "*",
+    "ext-pdo": "*"
+  }
+}

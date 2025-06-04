@@ -1,0 +1,4 @@
+.idea
+backend/cache/
+backend/vendor/
+docker/dbdata
