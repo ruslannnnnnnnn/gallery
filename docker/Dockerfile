@@ -36,3 +36,5 @@ RUN docker-php-ext-install pgsql \
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
 
 RUN apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN groupadd -g 1000 www && useradd -u 1000 -ms /bin/bash/ --no-user-group -g www www

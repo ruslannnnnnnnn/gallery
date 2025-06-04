@@ -10,6 +10,12 @@ services:
       - "./docker/php.ini:/usr/local/etc/php/conf.d/php.ini"
       - "./backend/:/var/www/php"
     working_dir: /var/www/php
+    command:  >
+      sh -c "chown -R www:www /var/www/php &&
+      chown -R www-data /var/www/php/cache &&
+      chown -R www-data /var/www/php/gallery &&
+      composer dump &&
+      php-fpm"
 
   nginx:
     image: nginx:alpine
